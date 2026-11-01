@@ -1,0 +1,20 @@
+{
+    "include": [
+        "."
+    ],
+    "exclude": [
+        "venv",
+        "__pycache__",
+        ".pyre*"
+    ],
+    "venvPath": ".",
+    "venv": "venv",
+    "pythonVersion": "3.12",
+    "pythonPlatform": "Windows",
+    "typeCheckingMode": "off",
+    "reportMissingImports": false,
+    "reportMissingModuleSource": false,
+    "extraPaths": [
+        "."
+    ]
+}

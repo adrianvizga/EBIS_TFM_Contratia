@@ -1,0 +1,78 @@
+# Entorno y secretos
+/.env
+backend/.env
+backend/.env.local
+backend/.env.*.local
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+.secrets/
+secrets.json
+credentials.json
+
+**/__pycache__/
+**/*.py[cod]
+**/*.pyd
+**/*.so
+backend/venv/
+backend/env/
+backend/.venv/
+backend/ENV/
+backend/*.egg-info/
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+backend/.coverage
+backend/htmlcov/
+backend/*.log
+
+# Artefactos generados por RAG
+backend/legal_corpus/**/embeddings/*
+!backend/legal_corpus/**/embeddings/embeddings_cache.jsonl
+backend/legal_corpus/es/v1_*/
+backend/legal_corpus/**/chunks/chunks_preview.md
+backend/legal_corpus/**/evaluations/latest_*_report.json
+backend/legal_corpus/**/CHANGELOG.md
+backend/legal_corpus/**/SAMPLING_REVIEW.md
+
+# Pruebas E2E
+backend/evals/
+
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
+frontend/.eslintcache
+frontend/eslint_output.txt
+frontend/eslint.json
+frontend/.cache/
+
+# IDE y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ficheros temporales y generados
+*.tmp
+*.bak
+.#*
+uploads/
+
+docker-compose.override.yml
+
+# Local overrides y artefactos
+compose.override.yml
+local/

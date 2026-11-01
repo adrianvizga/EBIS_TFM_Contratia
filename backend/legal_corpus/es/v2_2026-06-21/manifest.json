@@ -1,0 +1,659 @@
+{
+  "schema_version": 2,
+  "version": "v2_2026-06-21",
+  "jurisdiction": "ES",
+  "language": "es",
+  "generated_at": "2026-06-21",
+  "documents": [
+    {
+      "law_key": "CC_ES",
+      "law_name": "Código Civil",
+      "provider": "boe",
+      "official_id": "BOE-A-1889-4763",
+      "boe_id": "BOE-A-1889-4763",
+      "citation_prefix": "CC",
+      "scope": "ES",
+      "topics": [
+        "general",
+        "b2b",
+        "consumer",
+        "remedies"
+      ],
+      "subjects": [
+        "consumer",
+        "business"
+      ],
+      "contract_phases": [
+        "formation",
+        "performance",
+        "termination",
+        "remedies"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2025-01-03",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763&tn=1",
+        "content_type": "text/html"
+      },
+      "files": {
+        "source_path": "sources/CC_ES.html",
+        "normalized_path": "normalized/CC_ES.md"
+      },
+      "hashes": {
+        "source_sha256": "5d12ae98dca194e71b58f49d7ae0522aa0e890d1f23563007b537fae0cca69d9",
+        "normalized_sha256": "de82bc6a225125ced9a0e040ef68d55cd922fced929f0394f9ef2dde66d09b19"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "5d12ae98dca194e71b58f49d7ae0522aa0e890d1f23563007b537fae0cca69d9",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "LAU_1994",
+      "law_name": "Ley de Arrendamientos Urbanos",
+      "provider": "boe",
+      "official_id": "BOE-A-1994-26003",
+      "boe_id": "BOE-A-1994-26003",
+      "citation_prefix": "LAU",
+      "scope": "ES",
+      "topics": [
+        "lease"
+      ],
+      "subjects": [
+        "consumer",
+        "business"
+      ],
+      "contract_phases": [
+        "formation",
+        "performance",
+        "termination",
+        "remedies"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2023-05-25",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003&tn=1",
+        "content_type": "text/html"
+      },
+      "files": {
+        "source_path": "sources/LAU_1994.html",
+        "normalized_path": "normalized/LAU_1994.md"
+      },
+      "hashes": {
+        "source_sha256": "7cb5c93c4b0663dbd9c0d9c0dae44dcd15cbeab18aacc2d1f6250e9400b0b01f",
+        "normalized_sha256": "f6300aa4d5acc6fcecb4b1baff1f10ad4dd724c2e7e9fee884edab25886e68ff"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "7cb5c93c4b0663dbd9c0d9c0dae44dcd15cbeab18aacc2d1f6250e9400b0b01f",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "TRLGDCU_2007",
+      "law_name": "Texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios",
+      "provider": "boe",
+      "official_id": "BOE-A-2007-20555",
+      "boe_id": "BOE-A-2007-20555",
+      "citation_prefix": "TRLGDCU",
+      "scope": "ES",
+      "topics": [
+        "consumer",
+        "digital",
+        "remedies"
+      ],
+      "subjects": [
+        "consumer",
+        "business"
+      ],
+      "contract_phases": [
+        "precontract",
+        "formation",
+        "performance",
+        "termination",
+        "remedies"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2026-02-28",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555&tn=1",
+        "content_type": "text/html"
+      },
+      "files": {
+        "source_path": "sources/TRLGDCU_2007.html",
+        "normalized_path": "normalized/TRLGDCU_2007.md"
+      },
+      "hashes": {
+        "source_sha256": "b2eb36e69c814595cc4893830c2973d07d3b84daef7700099d9827677b4448d5",
+        "normalized_sha256": "c94f6709a53614d6fc86f241d3ec4f2ad7d3c22ffd37874559ebabd260947c8a"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "b2eb36e69c814595cc4893830c2973d07d3b84daef7700099d9827677b4448d5",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "LCGC_1998",
+      "law_name": "Ley de Condiciones Generales de la Contratación",
+      "provider": "boe",
+      "official_id": "BOE-A-1998-8789",
+      "boe_id": "BOE-A-1998-8789",
+      "citation_prefix": "LCGC",
+      "scope": "ES",
+      "topics": [
+        "general_terms",
+        "consumer",
+        "b2b"
+      ],
+      "subjects": [
+        "consumer",
+        "business"
+      ],
+      "contract_phases": [
+        "precontract",
+        "formation",
+        "remedies"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-8789&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2019-03-16",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-8789&tn=1",
+        "content_type": "text/html"
+      },
+      "files": {
+        "source_path": "sources/LCGC_1998.html",
+        "normalized_path": "normalized/LCGC_1998.md"
+      },
+      "hashes": {
+        "source_sha256": "78cbf68134a315ebaf911e18a1d1e0909430b387e35d2f3a0ec9b45a3b2e48d7",
+        "normalized_sha256": "5d40ca202e53d2fc4964cfaf6a317dbaad53ed2f750d59e9a80dc5618ab871b5"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "78cbf68134a315ebaf911e18a1d1e0909430b387e35d2f3a0ec9b45a3b2e48d7",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "MOROSIDAD_2004",
+      "law_name": "Ley de lucha contra la morosidad en las operaciones comerciales",
+      "provider": "boe",
+      "official_id": "BOE-A-2004-21830",
+      "boe_id": "BOE-A-2004-21830",
+      "citation_prefix": "Ley 3/2004",
+      "scope": "ES",
+      "topics": [
+        "b2b",
+        "payment",
+        "remedies"
+      ],
+      "subjects": [
+        "business"
+      ],
+      "contract_phases": [
+        "performance",
+        "remedies"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-21830&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2014-10-01",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-21830&tn=1",
+        "content_type": "text/html"
+      },
+      "files": {
+        "source_path": "sources/MOROSIDAD_2004.html",
+        "normalized_path": "normalized/MOROSIDAD_2004.md"
+      },
+      "hashes": {
+        "source_sha256": "e3711ff715692273e6f0d7aed7dbf78271cab9b95236f4c3b3028d5eec04bdc4",
+        "normalized_sha256": "54e7a0e1f831c8ca4d3ec73eeb605bd7383ab1bba9e5d2779bbed90b6ceed3db"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "e3711ff715692273e6f0d7aed7dbf78271cab9b95236f4c3b3028d5eec04bdc4",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "LSSI_2002",
+      "law_name": "Ley de servicios de la sociedad de la información y de comercio electrónico",
+      "provider": "boe",
+      "official_id": "BOE-A-2002-13758",
+      "boe_id": "BOE-A-2002-13758",
+      "citation_prefix": "LSSI",
+      "scope": "ES",
+      "topics": [
+        "ecommerce",
+        "digital",
+        "consumer",
+        "b2b"
+      ],
+      "subjects": [
+        "consumer",
+        "business"
+      ],
+      "contract_phases": [
+        "precontract",
+        "formation",
+        "performance"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2025-01-23",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758&tn=1",
+        "content_type": "text/html"
+      },
+      "files": {
+        "source_path": "sources/LSSI_2002.html",
+        "normalized_path": "normalized/LSSI_2002.md"
+      },
+      "hashes": {
+        "source_sha256": "1ebffad2842faf181c06ecd0312f54e047e98799fa6c1b12b708f8c9530d5af3",
+        "normalized_sha256": "34aa41fd73e9df8136a6a6be9613cf548799bfc1b17bb84658a87a03e484f880"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "1ebffad2842faf181c06ecd0312f54e047e98799fa6c1b12b708f8c9530d5af3",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "RGPD",
+      "law_name": "Reglamento (UE) 2016/679",
+      "provider": "eur_lex",
+      "official_id": "02016R0679-20160504",
+      "citation_prefix": "RGPD",
+      "scope": "UE",
+      "topics": [
+        "privacy"
+      ],
+      "subjects": [
+        "controller",
+        "processor",
+        "subprocessor"
+      ],
+      "contract_phases": [
+        "precontract",
+        "formation",
+        "performance",
+        "termination",
+        "remedies"
+      ],
+      "source": {
+        "type": "eur_lex_consolidated",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:02016R0679-20160504",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2016-05-04",
+        "license": "EUR-Lex reuse notice",
+        "resolved_url": "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:02016R0679-20160504",
+        "content_type": "text/html"
+      },
+      "files": {
+        "source_path": "sources/RGPD.html",
+        "normalized_path": "normalized/RGPD.md"
+      },
+      "hashes": {
+        "source_sha256": "a2e480fb286c69fb62842992be613a5207adf31d2b22198f7157aea55e81d06b",
+        "normalized_sha256": "ea15f8ba157f8477cc7c953a00cff76a79122068fb556f22e23ab083e3c30c2b"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "a2e480fb286c69fb62842992be613a5207adf31d2b22198f7157aea55e81d06b",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "LOPDGDD_2018",
+      "law_name": "Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales",
+      "provider": "boe",
+      "official_id": "BOE-A-2018-16673",
+      "boe_id": "BOE-A-2018-16673",
+      "citation_prefix": "LOPDGDD",
+      "scope": "ES",
+      "topics": [
+        "privacy"
+      ],
+      "subjects": [
+        "controller",
+        "processor",
+        "subprocessor"
+      ],
+      "contract_phases": [
+        "formation",
+        "performance",
+        "termination",
+        "remedies"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2025-12-27",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673&tn=1",
+        "content_type": "text/html"
+      },
+      "extraction": {
+        "mode": "selected_articles",
+        "include_article_ranges": [
+          [
+            5,
+            6
+          ],
+          [
+            19,
+            24
+          ],
+          [
+            28,
+            36
+          ],
+          [
+            44,
+            49
+          ],
+          [
+            70,
+            78
+          ]
+        ]
+      },
+      "files": {
+        "source_path": "sources/LOPDGDD_2018.html",
+        "normalized_path": "normalized/LOPDGDD_2018.md",
+        "notes_path": "normalized/LOPDGDD_2018_extraction_notes.md"
+      },
+      "hashes": {
+        "source_sha256": "196b27923fc4f69f47925230742879da80eb8d26de59ed4190b67882cc9dd1f4",
+        "normalized_sha256": "7e88725689a63aff4867bd909c647118acf26dd788ed5c34ae7c48809260fad6",
+        "notes_sha256": "96e91d4c558eba42663ec8cc2a80ddaf851f2314506569bd973c6b482d182663"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "196b27923fc4f69f47925230742879da80eb8d26de59ed4190b67882cc9dd1f4",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "TRLPI_1996",
+      "law_name": "Texto refundido de la Ley de Propiedad Intelectual",
+      "provider": "boe",
+      "official_id": "BOE-A-1996-8930",
+      "boe_id": "BOE-A-1996-8930",
+      "citation_prefix": "TRLPI",
+      "scope": "ES",
+      "topics": [
+        "ip",
+        "software",
+        "database"
+      ],
+      "subjects": [
+        "author",
+        "business"
+      ],
+      "contract_phases": [
+        "formation",
+        "performance",
+        "termination",
+        "remedies"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2022-03-30",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930&tn=1",
+        "content_type": "text/html"
+      },
+      "extraction": {
+        "mode": "selected_articles",
+        "include_article_ranges": [
+          [
+            1,
+            17
+          ],
+          [
+            43,
+            57
+          ],
+          [
+            95,
+            104
+          ],
+          [
+            133,
+            137
+          ]
+        ]
+      },
+      "files": {
+        "source_path": "sources/TRLPI_1996.html",
+        "normalized_path": "normalized/TRLPI_1996.md",
+        "notes_path": "normalized/TRLPI_1996_extraction_notes.md"
+      },
+      "hashes": {
+        "source_sha256": "6c22dd40f52bb68356f13e48e8841154ebbd49922c5e8028a045ddc52ac4886e",
+        "normalized_sha256": "0591b056be2b4c88df0f6580ce2f46895c70cd863a65166c019430cff3506f08",
+        "notes_sha256": "af8151c9c91839f27199ad43ba4c06fe1dc5b4787ba2d88c516be4d8ebb30e4b"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "6c22dd40f52bb68356f13e48e8841154ebbd49922c5e8028a045ddc52ac4886e",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "CCOM_1885",
+      "law_name": "Código de Comercio",
+      "provider": "boe",
+      "official_id": "BOE-A-1885-6627",
+      "boe_id": "BOE-A-1885-6627",
+      "citation_prefix": "CCom",
+      "scope": "ES",
+      "topics": [
+        "b2b",
+        "commercial",
+        "evidence"
+      ],
+      "subjects": [
+        "business"
+      ],
+      "contract_phases": [
+        "formation",
+        "performance",
+        "termination",
+        "remedies"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1885-6627&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2023-05-09",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-1885-6627&tn=1",
+        "content_type": "text/html"
+      },
+      "extraction": {
+        "mode": "selected_articles",
+        "include_article_ranges": [
+          [
+            50,
+            63
+          ],
+          [
+            281,
+            302
+          ]
+        ]
+      },
+      "files": {
+        "source_path": "sources/CCOM_1885.html",
+        "normalized_path": "normalized/CCOM_1885.md",
+        "notes_path": "normalized/CCOM_1885_extraction_notes.md"
+      },
+      "hashes": {
+        "source_sha256": "73c0ffe1523f562056036fbbb88126e6d316be7128aef5d6e06649fc3ea4a82f",
+        "normalized_sha256": "3302ab486eea33d0fbbf1fc49f403f086f90e69f70531e9fc18c8d6f59ab0aa7",
+        "notes_sha256": "27ee7bd3795e8987b3e6c1cb087743a82ef9ce63ffa80f43ac0cffb5714e3804"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "73c0ffe1523f562056036fbbb88126e6d316be7128aef5d6e06649fc3ea4a82f",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "LETA_2007",
+      "law_name": "Estatuto del trabajo autónomo",
+      "provider": "boe",
+      "official_id": "BOE-A-2007-13409",
+      "boe_id": "BOE-A-2007-13409",
+      "citation_prefix": "LETA",
+      "scope": "ES",
+      "topics": [
+        "self_employed",
+        "trade",
+        "labour_warning"
+      ],
+      "subjects": [
+        "self_employed",
+        "business"
+      ],
+      "contract_phases": [
+        "formation",
+        "performance",
+        "termination"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-13409&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2023-03-01",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-13409&tn=1",
+        "content_type": "text/html"
+      },
+      "files": {
+        "source_path": "sources/LETA_2007.html",
+        "normalized_path": "normalized/LETA_2007.md"
+      },
+      "hashes": {
+        "source_sha256": "fff6c676755d095cf88dd75c48f4390f3d3efac83a26f8d6c5489c51b7c712f6",
+        "normalized_sha256": "2005a7c0747f85895d5115fe51feb142bda457a8dff32a86970bcc9d5cb07241"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "fff6c676755d095cf88dd75c48f4390f3d3efac83a26f8d6c5489c51b7c712f6",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "LSEC_2020",
+      "law_name": "Ley reguladora de determinados aspectos de los servicios electrónicos de confianza",
+      "provider": "boe",
+      "official_id": "BOE-A-2020-14046",
+      "boe_id": "BOE-A-2020-14046",
+      "citation_prefix": "Ley 6/2020",
+      "scope": "ES",
+      "topics": [
+        "electronic_trust",
+        "evidence"
+      ],
+      "subjects": [
+        "consumer",
+        "business"
+      ],
+      "contract_phases": [
+        "formation",
+        "performance",
+        "remedies"
+      ],
+      "source": {
+        "type": "boe_consolidated",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2020-14046&tn=1",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2023-05-09",
+        "license": "BOE reutilización",
+        "resolved_url": "https://www.boe.es/buscar/act.php?id=BOE-A-2020-14046&tn=1",
+        "content_type": "text/html"
+      },
+      "files": {
+        "source_path": "sources/LSEC_2020.html",
+        "normalized_path": "normalized/LSEC_2020.md"
+      },
+      "hashes": {
+        "source_sha256": "a0e1ade8f779b11d5d4ce5442d4bb49800b98cf80fbfedcdde91110f61b9104e",
+        "normalized_sha256": "059624e1f51370b6602cdaa3024055446f3f215bf25f54270a4eec1ea94d51e4"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "a0e1ade8f779b11d5d4ce5442d4bb49800b98cf80fbfedcdde91110f61b9104e",
+        "format": "structured_markdown_v2"
+      }
+    },
+    {
+      "law_key": "EIDAS",
+      "law_name": "Reglamento (UE) 910/2014 eIDAS consolidado",
+      "provider": "eur_lex",
+      "official_id": "02014R0910-20241018",
+      "citation_prefix": "eIDAS",
+      "scope": "UE",
+      "topics": [
+        "electronic_trust",
+        "evidence"
+      ],
+      "subjects": [
+        "consumer",
+        "business"
+      ],
+      "contract_phases": [
+        "formation",
+        "performance",
+        "remedies"
+      ],
+      "source": {
+        "type": "eur_lex_consolidated",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:02014R0910-20241018",
+        "retrieved_at": "2026-06-21",
+        "consolidated_at": "2024-10-18",
+        "license": "EUR-Lex reuse notice",
+        "resolved_url": "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:02014R0910-20241018",
+        "content_type": "text/html"
+      },
+      "files": {
+        "source_path": "sources/EIDAS.html",
+        "normalized_path": "normalized/EIDAS.md"
+      },
+      "hashes": {
+        "source_sha256": "8f899d6ff0e16ae37c47b9b1ced32d4258639bd3e0a7af13e1fd6a6cc65e8bbd",
+        "normalized_sha256": "38c2f83a64347ae21fa26bbb8b2ce2eb8b03a3243716afecb2d9c5792279a796"
+      },
+      "normalization": {
+        "status": "current",
+        "source_sha256": "8f899d6ff0e16ae37c47b9b1ced32d4258639bd3e0a7af13e1fd6a6cc65e8bbd",
+        "format": "structured_markdown_v2"
+      }
+    }
+  ]
+}

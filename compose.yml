@@ -1,0 +1,180 @@
+name: contratia
+
+x-backend-image: &backend-image
+  image: contratia-backend:local
+
+x-backend-environment: &backend-environment
+  DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:?Define POSTGRES_PASSWORD in .env}@postgres:5432/${POSTGRES_DB:-contratia_db}
+  REDIS_URL: redis://:${REDIS_PASSWORD:?Define REDIS_PASSWORD in .env}@redis:6379/0
+  QDRANT_URL: http://qdrant:6333
+  QDRANT_API_KEY: ${QDRANT_API_KEY:?Define QDRANT_API_KEY in .env}
+  QDRANT_COLLECTION: ${QDRANT_COLLECTION:-legal_chunks_es_v2_2026_06_21}
+  OPENAI_API_KEY: ${OPENAI_API_KEY:?Define OPENAI_API_KEY in .env}
+  OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5.4-mini}
+  OPENAI_FALLBACK_MODEL: ${OPENAI_FALLBACK_MODEL:-gpt-4.1-mini}
+  OPENAI_EMBEDDING_MODEL: ${OPENAI_EMBEDDING_MODEL:-text-embedding-3-small}
+  SECRET_KEY: ${SECRET_KEY:?Define SECRET_KEY in .env}
+  DEBUG: ${DEBUG:-false}
+  DEMO_USER_ENABLED: ${DEMO_USER_ENABLED:-false}
+  DEMO_USER_PASSWORD: ${DEMO_USER_PASSWORD:-demo}
+  CORS_ORIGINS: '${CORS_ORIGINS:-http://localhost:3000,http://localhost:5173}'
+  TRUSTED_PROXIES: '${TRUSTED_PROXIES:-127.0.0.1,::1,172.16.0.0/12}'
+  FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
+  GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+  SMTP_HOST: ${SMTP_HOST:-smtp.gmail.com}
+  SMTP_PORT: ${SMTP_PORT:-587}
+  SMTP_USER: ${SMTP_USER:-}
+  SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+  SMTP_FROM: ${SMTP_FROM:-}
+  SMTP_FROM_NAME: ${SMTP_FROM_NAME:-ContratIA}
+  LOG_OUTPUT: console
+
+services:
+  postgres:
+    image: postgres:15.12-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Define POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-contratia_db}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB']
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+    networks: [internal]
+
+  redis:
+    image: redis:7.4.2-alpine
+    command: ['redis-server', '--appendonly', 'yes', '--requirepass', '${REDIS_PASSWORD:?Define REDIS_PASSWORD in .env}']
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?Define REDIS_PASSWORD in .env}
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ['CMD-SHELL', 'redis-cli -a $$REDIS_PASSWORD ping | grep PONG']
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+    networks: [internal]
+
+  qdrant:
+    image: qdrant/qdrant:v1.13.4
+    environment:
+      QDRANT__SERVICE__API_KEY: ${QDRANT_API_KEY:?Define QDRANT_API_KEY in .env}
+    volumes:
+      - qdrant_data:/qdrant/storage
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - bash -c ':> /dev/tcp/127.0.0.1/6333'
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    restart: unless-stopped
+    networks: [internal]
+
+  db-init:
+    <<: *backend-image
+    command: ['python', 'setup_db.py']
+    environment: *backend-environment
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: 'no'
+    networks: [internal]
+
+  qdrant-init:
+    <<: *backend-image
+    command: ['python', '-m', 'rag_tools.init_qdrant']
+    environment: *backend-environment
+    depends_on:
+      qdrant:
+        condition: service_healthy
+    restart: 'no'
+    networks: [internal]
+
+  backend:
+    <<: *backend-image
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: ['python', '-m', 'uvicorn', 'app:app', '--host', '0.0.0.0', '--port', '8000']
+    environment: *backend-environment
+    volumes:
+      - uploads_data:/uploads
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+      qdrant-init:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ready', timeout=3)
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+    networks: [internal]
+
+  worker:
+    <<: *backend-image
+    command: ['python', '-m', 'celery', '-A', 'workers.celery_app.celery_app', 'worker', '--loglevel=info']
+    environment: *backend-environment
+    volumes:
+      - uploads_data:/uploads
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+      qdrant-init:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD-SHELL', 'celery -A workers.celery_app.celery_app inspect ping --timeout 5 >/dev/null']
+      interval: 15s
+      timeout: 10s
+      retries: 6
+      start_period: 15s
+    restart: unless-stopped
+    networks: [internal]
+
+  frontend:
+    image: contratia-frontend:local
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+    ports:
+      - '${APP_PORT:-3000}:8080'
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'wget', '--quiet', '--tries=1', '--spider', 'http://127.0.0.1:8080/health']
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    restart: unless-stopped
+    networks: [internal]
+
+networks:
+  internal:
+
+volumes:
+  postgres_data:
+  redis_data:
+  qdrant_data:
+  uploads_data:
